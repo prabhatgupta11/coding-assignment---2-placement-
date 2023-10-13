@@ -49,6 +49,14 @@ githubRouter.post("/github", async (req, res) => {
       await data.save();
   }
 
+//   // Use findOneAndUpdate with upsert option to update or create a document based on 'id'
+//   await GitHubModel.findOneAndUpdate({ id }, data, {
+//     upsert: true,
+//     new: true,
+//     runValidators: true,
+//   });
+// }
+
   res.send("GitHub data saved successfully.");
 
   } catch (err) {
